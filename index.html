@@ -1,19 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS StyleSheet-->
     <link rel="stylesheet" href="./assets/css/stylesheet.css">
-    <title>Weather</title>
+    <title>Weather Dashboard</title>
 </head>
 
 <body>
     <header>
-        <nav class= "nav-container">
-            <h1>Weather Dashboard</h1>
+        <nav class="nav-container">
+            <h1 class="title">Weather Dashboard</h1>
         </nav>
     </header>
-    
+    <!--Container for Search and display-->
+    <div class="repos-container">
+        <!--Search Container--> 
+        <div class="city-search">
+            <!--Form for search-->
+            <form class="forecast-form" id="forecast-form">
+                <h2 class="city-header">Search for a City:</h2>
+                <div class="form-content">
+                    <input type="text" id="search-input">
+                    <button onclick="getCityDetails(event)" type="submit" id="search-btn"
+                        class="search-btn">Search</button>
+                </div>
+            </form>
+            <!--Lists Previous searches-->
+            <div class="search-history">
+                <p>Search History Data</p>
+            </div>
+        </div>
+        <!--Right side content, shows -->
+        <div class="display-weather" id="display-weather">
+            <!--Current Weather (top)-->
+            <div class="main-forecast" id="main-forecast"></div>
+            <!--5 Day Forecast/Current Weather-->
+            <div class="five-forecast" id="five-forecast"></div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <!--Bootstrap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <!--Axios-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--Custom Javascript-->
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

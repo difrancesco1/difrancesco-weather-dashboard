@@ -17,7 +17,80 @@
     padding: 25px;
     color: rgb(0, 0, 0);
     background-color: rgb(62, 120, 196);
-    font-size: 28px;
+    font-size: 32px;
   }
   
+
+  .repos-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+  }
+  
+  /* Search Bar Styles */
+  .city-search {
+    background: rgb(62, 120, 196);
+    margin-right: 15px;
+    margin-left: 30px;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 20%;
+  }
+  
+  .city-header {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .search-btn {
+    background-color: rgb(99, 14, 184);
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff;
+  }
+  
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  input[type="text"] {
+    padding: 5px;
+    margin: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Display Weather Styles */
+  .display-weather {
+    background: rgba(91, 174, 243, 0.4);
+    padding: 15px;
+    margin-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-width: 70%;
+    line-height: 2;
+  }
+  
+  /* UV Index*/
+  
+  .low {
+    background-color: rgb(0, 153, 0);
+  }
+  
+  .moderate {
+    background-color: rgb(255, 255, 0);
+  }
+  
+  .high {
+    background-color: rgb(255, 0, 0);
+  }
   
