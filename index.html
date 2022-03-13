@@ -26,9 +26,9 @@
                 <div class="form-content">
 
                     <input type="text" id="search-input">
-                    <button onclick="cityWeatherSearch(event)" type="submit" id="search-btn"
+                    <button onclick="getCityWeather(event)" type="submit" id="search-btn"
                         class="search-btn">Search</button>
-                    <button id="clear-storage">Clear</button>
+                    <button class="clear-storage" id="clear-storage">Clear</button>
 
                 </div>
             </form>
@@ -44,7 +44,7 @@
             <!--Current Weather (top)-->
             <div class="main-forecast" id="main-forecast"></div>
             <!--5 Day Forecast/Current Weather-->
-            <div class="five-forecast" id="five-forecast"></div>
+            <div id="five-day-forecast" class="mt-5"></div>
         </div>
     </div>
     <!-- jQuery -->
