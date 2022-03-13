@@ -17,34 +17,27 @@
         </nav>
     </header>
     <!--Container for Search and display-->
-    <div class="repos-container">
+    <div class="search-container">
         <!--Search Container-->
-        <div class="city-search">
+        <div class="weather-search">
             <!--Form for search-->
-            <form class="forecast-form" id="forecast-form">
+            <form class="weather1" id="forecast">
                 <h2 class="city-header">Search for a City:</h2>
                 <div class="form-content">
 
                     <input type="text" id="search-input">
                     <button onclick="getCityWeather(event)" type="submit" id="search-btn"
                         class="search-btn">Search</button>
-                    <button class="clear-storage" id="clear-storage">Clear</button>
+                    <button class="clear-storage" id="clear-storage">Clear Results</button>
 
                 </div>
             </form>
-
-            <!--Lists Previous searches-->
-            <div class="search-history">
-                <p>Search History Data</p>
-            </div>
             
         </div>
         <!--Right side content, shows -->
-        <div class="display-weather" id="display-weather">
+        <div class="show-weather">
             <!--Current Weather (top)-->
-            <div class="main-forecast" id="main-forecast"></div>
-            <!--5 Day Forecast/Current Weather-->
-            <div id="five-day-forecast" class="mt-5"></div>
+            <div id="main-forecast"></div>
         </div>
     </div>
     <!-- jQuery -->

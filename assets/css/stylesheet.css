@@ -4,18 +4,12 @@
     font-family: 'Roboto Mono', monospace;
   }
   
-  body {
-    width: 100vw;
-    min-height: 100vh;
-  }
-  
-  /* Navagation Styles */
   .nav-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 25px;
-    color: rgb(0, 0, 0);
+    color: black;
     background-color: rgb(62, 120, 196);
     font-size: 32px;
   }
@@ -25,29 +19,27 @@
   border: none;
   color: white;
   padding: 15px 32px;
+  margin-top: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 10px;
 }
-  .repos-container {
+  .search-container {
     display: flex;
     flex-direction: row;
     margin-top: 5%;
   }
   
-  /* Search Bar Styles */
-  .city-search {
+  .weather-search {
     background: rgb(62, 120, 196);
-    margin-right: 15px;
+    min-width: 20%;
     margin-left: 30px;
+    margin-right: 10px;
     padding: 15px;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-width: 20%;
+    flex-direction: column;
   }
   
   .city-header {
@@ -55,12 +47,12 @@
     margin-bottom: 5%;
   }
   .search-btn {
-    background-color: rgb(99, 14, 184);
-    margin: 5px;
-    padding: 5px;
+    background-color: blueviolet;
+    color: white;
+    margin: 6px;
+    padding: 6px;
     width: 100%;
     box-sizing: border-box;
-    color: #fff;
   }
   
   .form-content {
@@ -69,7 +61,7 @@
     align-items: center;
     justify-content: center;
   }
-  
+  /* search bar/input styling */
   input[type="text"] {
     padding: 5px;
     margin: 5px;
@@ -78,7 +70,7 @@
   }
   
   /* Display Weather Styles */
-  .display-weather {
+  .show-weather {
     background: rgba(91, 174, 243, 0.4);
     padding: 15px;
     margin-left: 15px;
@@ -88,18 +80,3 @@
     min-width: 70%;
     line-height: 2;
   }
-  
-  /* UV Index*/
-  
-  .low {
-    background-color: rgb(0, 153, 0);
-  }
-  
-  .moderate {
-    background-color: rgb(255, 255, 0);
-  }
-  
-  .high {
-    background-color: rgb(255, 0, 0);
-  }
-  
