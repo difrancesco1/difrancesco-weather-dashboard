@@ -1,10 +1,10 @@
 const apiKey = "ea3657aed959c50a52aab3081d7f9e83"; //Personal API ofr openweather
-var searchButton = document.querySelector("#search-btn"); //Search Button
+var searchButton = document.querySelector("#search-btn");
 
-var searchArray = []; //array for search results weather
-var searchArrayTwo = []; //array for 
+var searchArray = []; //Empty Array for data
+var searchArrayTwo = []; //Empty Array for data
 
-cityArr = [];
+cityArr = []; //Empty Array for data
 
 // Search City Function
 async function getCityDetails(event) { //await function
@@ -16,17 +16,23 @@ async function getCityDetails(event) { //await function
       `https://api.openweathermap.org/data/2.5/weather?q=${searchInput}&appid=${apiKey}&units=imperial`
     );
     console.log("citywweatherres", cityWeatherRes);
-    searchArray = cityWeatherRes.data; //Stores that data in our array 
+    searchArray = cityWeatherRes.data; 
     cityArr.push(cityWeatherRes.data); 
+    console.log("cityArr",cityArr )
   } catch (err) {
     console.log(err);
   }
 
-  //  To Clear Search Input
+  //Clears previous Searches input
   $("#forecast-form")[0].reset();
   getMoreDetails();
   saveText();
 }
+//clear old searches from localstorage
+$("#clear-storage").on("click", (event) => {
+  localStorage.clear();
+  renderCities();
+});
 
 // Details Function
 async function getMoreDetails() {
@@ -43,31 +49,7 @@ async function getMoreDetails() {
   displayForecast();
 }
 
-
-// UV Index Color
-var uvColor = function() {
-  var UVUrl = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={4d664091c5d3ad248b463f239a1cc951}"
-  fetch(UVUrl).then(function(response) {
-    var uvIndex = parseInt(response.value);
-    var uvBox = document.getElementById(".uv-area");
-
-    uvBox.textContent("UV Index: " + response.value);
-
-    if (uvIndex > 0 && uvIndex <= 2.99) {
-      uvBox.addClass("low");
-    }
-    else if (uvIndex >= 3 && uvIndex <= 5.99) {
-      uvBox.addClass("moderate");
-    }
-    else {
-      uvBox.addClass("high");
-    }
-  })
-};
-
-uvColor();
-
-// Display Forecast Function 
+//Diplays Each Forecast
 function displayForecast() {
   var mainForcastDIV = document.querySelector("#main-forecast");
 
@@ -98,7 +80,7 @@ function displayForecast() {
 }
 
 
-// Save Text Function
+//Function Used to save Search History
 
 function saveText() {
   sessionStorage.setItem("search-histories", JSON.stringify(cityArr));

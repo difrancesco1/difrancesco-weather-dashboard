@@ -18,21 +18,26 @@
     </header>
     <!--Container for Search and display-->
     <div class="repos-container">
-        <!--Search Container--> 
+        <!--Search Container-->
         <div class="city-search">
             <!--Form for search-->
             <form class="forecast-form" id="forecast-form">
                 <h2 class="city-header">Search for a City:</h2>
                 <div class="form-content">
+
                     <input type="text" id="search-input">
-                    <button onclick="getCityDetails(event)" type="submit" id="search-btn"
+                    <button onclick="cityWeatherSearch(event)" type="submit" id="search-btn"
                         class="search-btn">Search</button>
+                    <button id="clear-storage">Clear</button>
+
                 </div>
             </form>
+
             <!--Lists Previous searches-->
             <div class="search-history">
                 <p>Search History Data</p>
             </div>
+            
         </div>
         <!--Right side content, shows -->
         <div class="display-weather" id="display-weather">
